@@ -80,3 +80,7 @@ switch (day) {
     default:
         console.log("Invalid day");
 }
+
+// Ternary Operator
+let n = 10;
+n % 2 === 0 ? console.log("Even") : console.log("Odd"); // condition ? expression_if_true : expression_if_false;
