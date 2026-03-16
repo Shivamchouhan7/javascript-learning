@@ -1,118 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cricket Game</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cricket</title>
+    <style>
+        body{
+            text-align: center;
+        }
+    </style>
 </head>
-
 <body>
+    <h1>Bat Ball Stump Game</h1>
+    <br>
+    <button onclick="
+    
+    console.log('you have choosen Bat');
+    let randomNumber= Math.random()*3;
+    let computerChoice;
+    if(randomNumber>0 && randomNumber<=1){
+         computerChoice = 'Bat';
+    }
+    else if (randomNumber>1 && randomNumber<=2 ){
+         computerChoice = 'Ball';
+    }
+    else {
+         computerChoice = 'Stump';
+    }
+    
 
-<h1>Bat Ball Stump Game</h1>
+    let resultMsg ;
+    if (computerChoice === 'Ball'){
+        resultMsg= `user won`;
+    }
+    else if(computerChoice ==='Bat') {
+        resultMsg= ` it's a tie`
+    }
+    else if (computerChoice ==='Stump'){
+        resultMsg= `computer won`
+    }
 
-<!-- BAT BUTTON -->
-<button onclick="
-var randomNumber=Math.random()*3;
-var computerChoice;
+    alert(`you have chosen bat . computer choice is ${computerChoice} and ${resultMsg}`);
+    " >Bat</button>
+    <button onclick="
+    
+    console.log('you have choosen Ball');
+    randomNumber= Math.random()*3;
+    
+    if(randomNumber>0 && randomNumber<=1){
+         computerChoice = 'Bat';
+    }
+    else if (randomNumber>1 && randomNumber<=2 ){
+         computerChoice = 'Ball';
+    }
+    else {
+         computerChoice = 'Stump';
+    }
+    
 
-if(randomNumber>0 && randomNumber<=1){
-computerChoice='Bat';
-}
-else if(randomNumber>1 && randomNumber<=2){
-computerChoice='Ball';
-}
-else{
-computerChoice='Stump';
-}
+    
+    if (computerChoice === 'Ball'){
+        resultMsg= `it's a tie`;
+    }
+    else if(computerChoice ==='Bat') {
+        resultMsg= ` computer won `
+    }
+    else if (computerChoice ==='Stump'){
+        resultMsg= `user won`
+    }
 
-var resultmsg;
+    alert(`you have chosen ball . computer choice is ${computerChoice} and ${resultMsg}`);
+    "
+     >ball</button>
+    <button 
+     onclick="
+    
+    console.log('you have choosen Stump');
+    randomNumber= Math.random()*3;
+    
+    if(randomNumber>0 && randomNumber<=1){
+         computerChoice = 'Bat';
+    }
+    else if (randomNumber>1 && randomNumber<=2 ){
+         computerChoice = 'Ball';
+    }
+    else {
+         computerChoice = 'Stump';
+    }
+    
 
-if(computerChoice==='Bat'){
-resultmsg=`It's a tie`;
-}
-else if(computerChoice==='Ball'){
-resultmsg=`User won`;
-}
-else{
-resultmsg=`Computer won`;
-}
+    
+    if (computerChoice === 'Ball'){
+        resultMsg= `computer won `;
+    }
+    else if(computerChoice ==='Bat') {
+        resultMsg= ` user won `
+    }
+    else if (computerChoice ==='Stump'){
+        resultMsg= `it's a tie`
+    }
 
-alert(`User chose Bat and computer chose ${computerChoice} and ${resultmsg}`);
-">
-
-Bat
-
-</button>
-
-
-<!-- BALL BUTTON -->
-<button onclick="
-var randomNumber=Math.random()*3;
-var computerChoice;
-
-if(randomNumber>0 && randomNumber<=1){
-computerChoice='Bat';
-}
-else if(randomNumber>1 && randomNumber<=2){
-computerChoice='Ball';
-}
-else{
-computerChoice='Stump';
-}
-
-var resultmsg;
-
-if(computerChoice==='Bat'){
-resultmsg=`Computer won`;
-}
-else if(computerChoice==='Ball'){
-resultmsg=`It's a tie`;
-}
-else{
-resultmsg=`User won`;
-}
-
-alert(`User chose Ball and computer chose ${computerChoice} and ${resultmsg}`);
-">
-
-Ball
-
-</button>
-
-
-<!-- STUMP BUTTON -->
-<button onclick="
-var randomNumber=Math.random()*3;
-var computerChoice;
-
-if(randomNumber>0 && randomNumber<=1){
-computerChoice='Bat';
-}
-else if(randomNumber>1 && randomNumber<=2){
-computerChoice='Ball';
-}
-else{
-computerChoice='Stump';
-}
-
-var resultmsg;
-
-if(computerChoice==='Bat'){
-resultmsg=`User won`;
-}
-else if(computerChoice==='Ball'){
-resultmsg=`Computer won`;
-}
-else{
-resultmsg=`It's a tie`;
-}
-
-alert(`User chose Stump and computer chose ${computerChoice} and ${resultmsg}`);
-">
-
-Stump
-
-</button>
+    alert(`you have chosen stump . computer choice is ${computerChoice} and ${resultMsg}`);
+    ">stump</button>
+    
 
 </body>
 </html>
