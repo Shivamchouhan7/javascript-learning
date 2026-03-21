@@ -2,7 +2,10 @@
 let score={
     win:0,
     lost:0,
-    tie:0
+    tie:0,
+    displayScore:function(){
+         return `won:${score.win} , lost:${score.lost} , tie:${score.tie}`;
+    }
 };
 
 function getComputerChoice(){
@@ -35,5 +38,5 @@ function game(userChoice){
     console.log("user chose",userChoice);
     let computerChoice=getComputerChoice();
     let result=getResult(computerChoice,userChoice);
-    alert(`User chose ${userChoice} Computer chose ${computerChoice} and ${result} \n won:${score.win} , lost:${score.lost} , tie:${score.tie}`);
+    alert(`User chose ${userChoice} Computer chose ${computerChoice} and ${result} \n ${score.displayScore()} `);
 }
