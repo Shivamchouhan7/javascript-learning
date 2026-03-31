@@ -30,20 +30,21 @@ function getResult(computerChoice,userChoice){
         score.win++;
         return "User won";
     }
-    if (userChoice==='Reset'){
-        score.win=0;
-        score.lost=0;
-        score.tie=0;
-        return "Score reset";
-    }
-    
     else{
         score.lost++;
         return "Computer won"
     }
 }
 function game(userChoice){
-    console.log("user chose",userChoice);
+    console.log("user chose",userChoice)  
+    if(userChoice==='Reset'){
+        score.win=0;
+        score.lost=0;
+        score.tie=0;
+        localStorage.setItem('score',JSON.stringify(score));
+        alert('Score Reset Successfully ');
+        return;
+    }  
     let computerChoice=getComputerChoice();
     let result=getResult(computerChoice,userChoice);
     alert(`User chose ${userChoice} Computer chose ${computerChoice} and ${result} \n ${score.displayScore()} `);
