@@ -42,11 +42,26 @@ function game(userChoice){
         score.lost=0;
         score.tie=0;
         localStorage.setItem('score',JSON.stringify(score));
-        alert('Score Reset Successfully ');
+        document.querySelector('#user-move').innerText = '';
+        document.querySelector('#computer-move').innerText = '';
+        document.querySelector('#result').innerText = '';
+        document.querySelector('#score').innerText = '';
+        document.querySelector('#score-reset').innerText=`Score Reset Successfully`;
+        // alert('Score Reset Successfully ');
         return;
     }  
+    document.querySelector('#score-reset').innerText = '';
     let computerChoice=getComputerChoice();
     let result=getResult(computerChoice,userChoice);
-    alert(`User chose ${userChoice} Computer chose ${computerChoice} and ${result} \n ${score.displayScore()} `);
+    document.querySelector('#user-move').innerText = `you have chosen : ${userChoice}`
+
+    document.querySelector('#computer-move').innerText =  `Computer chose : ${computerChoice}`
+
+    document.querySelector('#result').innerText =  `result : ${result}`
+
+    document.querySelector('#score').innerText =`score : ${score.displayScore()}`
+
+
+    // alert(`User chose ${userChoice} Computer chose ${computerChoice} and ${result} \n ${score.displayScore()} `);
     localStorage.setItem('score', JSON.stringify(score));
 }

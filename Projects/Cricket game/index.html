@@ -4,21 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>cricket</title>
-    <style>
-        body{
-            text-align: center;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
     <h1>Bat Ball Stump Game</h1>
     <br>
     
-    <button onclick="game('Bat')">Bat</button>
-    <button onclick="game('Ball')">Ball</button>
-    <button onclick="game('Stump')">Stump</button>
+    <button class="choice-button" onclick="game('Bat')"><img src="Images/Bat.png" alt="Bat Image" class="choice-image" ></button>
+    <button class="choice-button"  onclick="game('Ball')"><img src="Images/ball.png" alt="Ball Image" class="choice-image" ></button>
+    <button class="choice-button"  onclick="game('Stump')"><img src="Images/stump.png" alt="Stump Image" class="choice-image"></button>
     <br>
     <br>
+    <h3 id="user-move"></h3>
+    <h3 id="computer-move"></h3>
+    <h3 id="result"></h3>
+    <h3 id="score"></h3>
+    <h3 id="score-reset"></h3>
     <button onclick="game('Reset')">RESET</button>
 
     <script src="script.js"></script>
