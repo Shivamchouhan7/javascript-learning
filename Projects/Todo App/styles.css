@@ -1,0 +1,49 @@
+#main-heading {
+    text-align: center;
+}
+
+.input-container {
+    display: flex;
+    justify-content: center;   
+    align-items: center;       
+    gap: 10px;                 
+    margin-top: 20px;
+}
+
+#todo-input, #todo-date {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+}
+
+#add-btn {
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: green;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.todo-container {
+    display: grid;
+    grid-template-columns: 220px 140px 100px;
+    justify-content: center;
+    align-items: center;
+    row-gap: 10px;
+    margin-top: 20px;
+}
+
+.todo-container span {
+    text-align: center;
+}
+
+.todo-container button {
+    justify-self: center;
+    padding: 8px 14px;
+    border-radius: 16px;
+    border: none;
+    background-color: #d62828;
+    color: #fff;
+    cursor: pointer;
+}
