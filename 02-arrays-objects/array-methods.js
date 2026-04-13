@@ -26,3 +26,11 @@ let b=[4,5,6];
 
 let c= a.concat(b);
 console.log("final array after concatination",c);
+
+// .map()
+let squares= numbers.map(num=>num*num);
+console.log("Squares of numbers:",squares);
+
+// .filter()
+let evenNumbers= numbers.filter(num=>num%2===0);
+console.log("Even numbers:",evenNumbers);
